@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .page {
+      background-color: hsl(30, 38%, 92%);
+
+
+    }
+
+    .wrapper {
+      background-color: hsl(0, 0%, 100%);
+      min-width: 40%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      display: flex;
+
+    }
+
+    .prices {
+      display: flex;
+    }
+
+    .left {
+      min-width: 50%;
+      min-height: auto;
+      background-image: url("images/image-product-desktop.jpg");
+      background-size: cover;
+    }
+
+    @media screen and (max-width:450px) {
+      .wrapper {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .left {
+        background-image: url("images/image-product-mobile.jpg");
+        min-height: 300px;
+        width: auto;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .content {
+        font-size: clamp(1rem, 2vw, 2rem);
+      }
+    }
+
+    .right {
+      min-width: 50%;
+    }
+
+    .content {
+      padding-top: 5%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 5%;
+      font-size: clamp(.75rem, 2.5vw, 2rem);
+    }
+
+    .button {
+      background-color: hsl(158, 36%, 37%);
+      color: hsl(0, 0%, 100%);
+      padding-top: 1px;
+      padding-bottom: 1px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      font-family: 'Montserrat';
+    }
+
+    .discount {
+      margin-right: 10%;
+    }
+
+    .original {
+      align-items: center;
+      text-align: center;
+    }
+
+    .type {
+      font-family: 'Montserrat';
+      color: hsl(228, 12%, 48%);
+      font-size: 14px 2.5vw;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      font-family: 'Montserrat';
+      color: hsl(228, 12%, 48%);
+      font-size: 14px 2.5vw;
+    }
+
+    .scent {
+      font-family: 'Fraunces';
+      color: hsl(212, 21%, 14%);
+      font-weight: 700;
+    }
+
+    .discount {
+      font-family: 'Fraunces';
+      color: hsl(158, 36%, 37%);
+      font-weight: 700;
+    }
+
+    .original {
+      font-family: 'Montserrat';
+      padding-top: 2%;
+      text-decoration: line-through;
+      color: hsl(228, 12%, 48%);
+    }
+
+    .cart {
+      padding-top: 4%;
+      padding-right: 3%;
+      height: 4.75vw;
+    }
+  </style>
+</head>
+
+<body class="page">
+  <div class="wrapper">
+
+    <div class="left" id="image">
+
+
+    </div>
+
+    <div class="right">
+
+      <div class="content">
+
+        <p class="type">PERFUME</p>
+
+        <h1 class="scent">Gabrielle Essence Eau De Parfum</h1>
+
+        <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+
+        <div class="prices">
+          <h1 class="discount">$149.99</h1>
+          <h3 class="original">$169.99</h3>
+        </div>
+
+
+        <div class="button">
+          <img class="cart" src="/product-preview-card-component-main/images/icon-cart.svg" alt="Shopping cart emblem">
+          <h3>Add to Cart</h3>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>
