@@ -24,22 +24,27 @@
 
     .page {
       background-color: hsl(30, 38%, 92%);
-
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .wrapper {
       background-color: hsl(0, 0%, 100%);
-      min-width: 40%;
+      width: 80%;
       height: auto;
       overflow: hidden;
       border-radius: 10px;
       display: flex;
-
+      margin-top: clamp(25px,1vw,100px);
+      size: clamp();
+      
     }
 
     .prices {
       display: flex;
+      padding-left: 2%;
+      padding-right: 2%;
     }
 
     .left {
@@ -47,28 +52,10 @@
       min-height: auto;
       background-image: url("images/image-product-desktop.jpg");
       background-size: cover;
+      background-position: center;
     }
 
-    @media screen and (max-width:450px) {
-      .wrapper {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .left {
-        background-image: url("images/image-product-mobile.jpg");
-        min-height: 300px;
-        width: auto;
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
-      }
-
-      .content {
-        font-size: clamp(1rem, 2vw, 2rem);
-      }
-    }
+    
 
     .right {
       min-width: 50%;
@@ -79,7 +66,7 @@
       padding-left: 5%;
       padding-right: 5%;
       padding-bottom: 5%;
-      font-size: clamp(.75rem, 2.5vw, 2rem);
+      font-size: clamp(.75rem, 2vw, 1.5rem);
     }
 
     .button {
@@ -135,9 +122,50 @@
     }
 
     .cart {
-      padding-top: 4%;
+      padding-top: 2vw;
       padding-right: 3%;
-      height: 4.75vw;
+      height: clamp(1rem,3vw,2rem);
+    }
+
+    @media screen and (max-width:450px) {
+      .wrapper {
+        width: 70%;
+        min-height: 800px;
+        display: block;
+      }
+
+      .left {
+        background-image: url("images/image-product-mobile.jpg");
+        min-height: 300px;
+        width: auto;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .content {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+      }
+
+      .cart{
+        padding-top: 6vw;
+      }
+    }
+
+    @media screen and (min-width: 100px) {
+      .wrapper{
+        max-width: 750px;
+        max-height: 500px;
+      }
+
+      .content{
+        font-size: clamp(1rem, 2vw, 1rem) ;
+      }
+
+      .cart{
+        height: 1.5rem;
+        padding-top: clamp(3px,2vw,20px);
+      }
     }
   </style>
 </head>
